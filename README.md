@@ -1,6 +1,6 @@
 # Personal Portfolio - AWS and Heroku deployment
 ## Description - 
-Developed and deployed a full stack portfolio app in order to present my projects, the rest can be found in my [GitHub](https://github.com/akamary) profile. By implementing a backend using Node.js (express framework), any visitor can contact me by sending emails using nodemailer and storing in MongoDB the number of visitors, current time and date. Deployed the app using Heroku Cloud.  
+Developed and deployed a full stack portfolio app in order to present my projects, the rest can be found in my [GitHub](https://github.com/akamary) profile. By implementing a backend using Node.js (express framework),  Deployed the app using Heroku Cloud.  
 **Heroku-** https://kamaryaviv.herokuapp.com/.  
 
 **In addition to Heroku deployment**, and to enrich my knowledge, I have decided to deploy the MERN app using AWS Cloud services for improving site's performance:
@@ -9,6 +9,7 @@ Developed and deployed a full stack portfolio app in order to present my project
 * Using Route 53 service for registering a custom domain and configured the EC2 instance to point that url 
 * Securing site with LetsEncrypt SSL  
 
+any visitor can contact me by sending emails using nodemailer and storing in MongoDB the number of visitors,location, current time and date, etc.
  
 **AWS EC2 Instance-** https://kamaryaviv.com/
 
