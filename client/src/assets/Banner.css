@@ -1,0 +1,168 @@
+.banner {
+  margin-top: 0;
+  padding: 260px 0 100px 0;
+  background-image: black;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  width: 400px;
+  height: 70px;
+  background: linear-gradient(
+    90.21deg,
+    rgba(109, 213, 245, 0.5) -5.91%,
+    rgba(35, 10, 148, 0.5) 111.58%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 38px;
+  margin-bottom: 16px;
+  display: inline-block;
+  align-items: center;
+  border-radius: 20px;
+}
+.banner h1 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+.banner p {
+  color: #b8b8b8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20em;
+  text-align: center;
+  align-items: center;
+}
+.banner a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  border: none !important;
+  outline: none !important;
+  -moz-outline-style: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+}
+.banner a:hover {
+  outline: none;
+  color: #ffffff;
+}
+
+.banner a svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+  text-align: center;
+}
+
+.banner a:hover svg {
+  margin-left: 25px;
+  color: #ffffff;
+}
+
+.banner button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+.banner button svg {
+  font-size: 25px;
+  margin-left: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+.banner button:hover svg {
+  margin-left: 25px;
+}
+.banner img {
+  animation: updown 3s linear infinite;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+@media (max-width: 500px) {
+  .banner {
+    margin-top: 0;
+    padding: 150px 0 100px 0;
+    background-image: black;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .banner .tagline {
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    padding: 8px 10px;
+    background: linear-gradient(
+      90.21deg,
+      rgba(109, 213, 245, 0.5) -5.91%,
+      rgba(35, 10, 148, 0.5) 111.58%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: 28px;
+    width: 250px;
+    height: 60px;
+    margin-bottom: 16px;
+    display: inline-block;
+    align-items: center;
+  }
+  .banner h1 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .banner p {
+    color: #b8b8b8;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    text-align: center;
+    align-items: center;
+  }
+}
