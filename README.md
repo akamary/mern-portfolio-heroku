@@ -27,36 +27,6 @@ Tech utilized:
 
 **Adding a node.js.yaml file using GitHub Actions:**
 
-```
-name: Node.js CI
-
-on:
-  push:
-    branches: [ "main" ]
-
-jobs:
-  build:
-
-    runs-on: self-hosted
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: sudo pm2 restart <your server.js>
-    - run: sudo cp -r ~/<yourFolder>/ls/<packageName>/<packageName>/build/* /var/www/<newFolder>/
-    - run: sudo service nginx restart 
-```
 **Then, configuring GitHub Runner in Linux for EC2 instance.**
 
 * configure /etc/nginx/sites-enabled/default
