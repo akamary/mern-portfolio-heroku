@@ -9,8 +9,8 @@ Developed and deployed a full stack portfolio app in order to present my project
 * Using Route 53 service for registering a custom domain and configured the EC2 instance to point that url 
 * Securing site with LetsEncrypt SSL  
 
-any visitor can contact me by sending emails using nodemailer and storing in MongoDB the number of visitors,location, current time and date, etc.
- 
+Utilized MongoDB for user engagement.
+
 **AWS EC2 Instance-** https://kamaryaviv.com/
 
 
@@ -24,6 +24,7 @@ Tech utilized:
 * Geolocation api
 * mongoose
 * nodemailer
+* ssl cert using letsencrypt
 
 **Adding a node.js.yaml file using GitHub Actions:**
 
