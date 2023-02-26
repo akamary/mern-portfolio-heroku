@@ -12,9 +12,9 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = ["Engineer","Developer"];
+  const toRotate = ["Engineer", "Developer"];
   const period = 2000;
-const ref = useRef('#connect');
+  const ref = useRef("#connect");
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -65,19 +65,18 @@ const ref = useRef('#connect');
             {({ isVisible }) => (
               <div
                 className={
-                  isVisible
-                    ? "animate__animated animate__backInLeft"
-                    : ""
+                  isVisible ? "animate__animated animate__backInDown" : ""
                 }
               >
                 <span className="tagline">Welcome !</span>
+                <span className="writer">
                 <h1>
-                  {`Hello, my name is `}
-
-                  {` Aviv `}
+                  {`Hello, my name is Aviv! As a hard-working and quick learner,`}
+                  
+                  {` I am eager to start my career as `}
 
                   <br></br>
-                  {` I am a Software `}
+                  {` a Software `}
 
                   <span
                     className="txt-rotate"
@@ -87,9 +86,14 @@ const ref = useRef('#connect');
                     <span className="wrap">{text}</span>
                   </span>
                 </h1>
+                  </span >
+                  
                 <p>
-                  B.Sc in Software Engineering. Highly motivated graduate, self
-                  driven and a team player, quick-learner
+                I am a tech enthusiast with a Bachelor of Science degree in Software Engineering
+                 and experience in building web applications. I am committed to delivering high-quality
+                  code and enjoy working in a collaborative team environment.
+                  <br></br>
+                  I am looking for a full-time junior developer role.
                 </p>
                 <p>
                   <a href="#connect" role="button">

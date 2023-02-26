@@ -28,6 +28,7 @@ function App() {
     <div className="App">
       <Particles />
       <NavBar />
+      
       <Banner />
       <Skills />
       <Experience />

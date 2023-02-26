@@ -11,7 +11,7 @@ import "./../assets/NavBar.css";
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 480px)" });
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 560px)" });
 
   useEffect(() => {
     const onScroll = () => {
@@ -39,6 +39,89 @@ export const NavBar = () => {
       >
         {isTabletOrMobile && (
           <div className="mobilever">
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="ml-auto">
+                <Nav.Link
+                  href="#home"
+                  className={
+                    activeLink === "home" ? "active navbar-link" : "navbar-link"
+                  }
+                  onClick={() => onUpdateActiveLink("home")}
+                >
+                  Home
+                </Nav.Link>
+                <Nav.Link
+                  href="#skills"
+                  className={
+                    activeLink === "skills"
+                      ? "active navbar-link"
+                      : "navbar-link"
+                  }
+                  onClick={() => onUpdateActiveLink("skills")}
+                >
+                  Skills
+                </Nav.Link>
+                <Nav.Link
+                  href="#project"
+                  className={
+                    activeLink === "project"
+                      ? "active navbar-link"
+                      : "navbar-link"
+                  }
+                  onClick={() => onUpdateActiveLink("project")}
+                >
+                  Projects
+                </Nav.Link>
+              </Nav>
+              <span className="navbar-text">
+                <div className="social-icon">
+                  <div className="hover-text">
+                    <span className="tooltip-text" id="bottom">
+                      {" "}
+                      LinkedIn-Aviv Kamary
+                    </span>
+                    <a
+                      href="https://www.linkedin.com/in/kamaryaviv/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={linkedin} alt="LinkedIn" />
+                    </a>
+                  </div>
+                  <div className="hover-text">
+                    <span className="tooltip-text" id="bottom">
+                      {" "}
+                      GitHub-Aviv Kamary
+                    </span>
+                    <a
+                      href="https://github.com/akamary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={github} alt="GitHub" />
+                    </a>
+                  </div>
+                  <div className="hover-text">
+                    <span className="tooltip-text" id="bottom">
+                      {" "}
+                      Gmail-Aviv Kamary
+                    </span>
+                    <a
+                      href="mailto:kamaryaviv@gmail.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={gmail} alt="Gmail" />
+                    </a>
+                  </div>
+                </div>
+                <HashLink to="#connect">
+                  <button className="vvd">
+                    <span>Contact</span>
+                  </button>
+                </HashLink>
+              </span>
+            </Navbar.Collapse>
             <Navbar.Brand href="#home">
               <div className="logo">
                 <span className="circle-sketch-highlight">AVIV KAMARY</span>

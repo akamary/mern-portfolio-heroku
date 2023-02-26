@@ -77,7 +77,7 @@ export const Contact = () => {
               {({ isVisible }) => (
                 <img
                   className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
+                    isVisible ? "animate__animated animate__rollIn" : ""
                   }
                   src={contactImg}
                   alt="Contact Us"
@@ -90,7 +90,9 @@ export const Contact = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
+                    isVisible
+                      ? "animate__animated animate__rotateInDownRight"
+                      : ""
                   }
                 >
                   <h2>Contact</h2>
@@ -149,7 +151,7 @@ export const Contact = () => {
                           <span>{buttonText}</span>
                         </button>
                       </Col>
-                      { status.message && (
+                      {status.message && (
                         <Col>
                           <p
                             className={

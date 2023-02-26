@@ -17,10 +17,10 @@ import student3 from "./../assets/images/StudentSysLect.png";
 import student4 from "./../assets/images/StudentSysLectadd.png";
 import student5 from "./../assets/images/StudentSysUser.png";
 import github from "./../assets/images/icons8-github.svg";
-import portf1 from "./../assets/images/pf1.png";
-import portf2 from "./../assets/images/pf2.png";
-import portf3 from "./../assets/images/pf3.png";
-import portf4 from "./../assets/images/pf4.png";
+import portf1 from "./../assets/images/p1.png";
+import portf2 from "./../assets/images/p2.png";
+import portf3 from "./../assets/images/p3.png";
+import portf4 from "./../assets/images/p4.png";
 import food1 from "./../assets/images/food1.png";
 import food2 from "./../assets/images/food2.png";
 import food3 from "./../assets/images/food3.png";
@@ -31,6 +31,7 @@ import TrackVisibility from "react-on-screen";
 import Carousel from "react-bootstrap/Carousel";
 import { useState } from "react";
 import "./../assets/Experience.css";
+import link from "./../assets/images/icons8-link-32.png";
 
 export const Experience = () => {
   const [isReadMore1, setIsReadMore1] = useState(true);
@@ -42,7 +43,7 @@ export const Experience = () => {
 
   const project1 = [
     {
-      title: "Products Compare",
+      title: "ProductHunter",
       description:
         "The goal of this project is to implement an Restfull API application for tracking and fetching products by implementing a backend app using Spring Boot in addition to a frontend app using Reactjs and other technologies. Authentication and Authorization for securing both apps. Spring Data JPA Pagination.",
       imgUrl: compare1,
@@ -137,18 +138,16 @@ export const Experience = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__heartBeat" : ""
+                    isVisible ? "animate__animated animate__fadeInTopRight" : ""
                   }
                 >
                   <h2>Projects</h2>
                   <p>
-                    This list includes some of my personal/academic projects
-                    such as: R&D, Web apps and more. Despite the fact that each
-                    project's description is brief, each one has one or more
-                    links, one of which must lead to the project repository
-                    which contains a detailed and complete description with
-                    examples. All project can be found in my{" "}
-                    <div className="hover-text">
+                  Here are some of the projects that I have worked on,
+                   both personal and academic. The list includes web apps,
+                    R&D projects, and more. Each project has a brief 
+                    description and one or more links. To learn more about a 
+                    project, you can visit the project repository on my <div className="hover-text">
                       <span className="tooltip-text" id="top">
                         {" "}
                         My GitHub Account
@@ -160,8 +159,10 @@ export const Experience = () => {
                       >
                         GitHub{" "}
                       </a>
-                      account.
-                    </div>
+                      account
+                    </div>, where you will find a detailed and complete 
+                     description along with examples.{" "}
+                    
                   </p>
                 </div>
               )}
@@ -172,7 +173,7 @@ export const Experience = () => {
                 {({ isVisible }) => (
                   <div
                     className={
-                      isVisible ? "animate__animated animate__heartBeat" : ""
+                      isVisible ? "animate__animated animate__fadeInBottomLeft" : ""
                     }
                   >
                     <Nav
@@ -190,12 +191,15 @@ export const Experience = () => {
 
               <Tab.Content>
                 <Tab.Pane eventKey="first">
+                
                   <Row className="justify-content-center">
+                  
                     <div className="item">
+                      
                       {project1.map((projectt1, index) => {
                         return (
                           <Col>
-                            <h5>Products Compare</h5>
+                            <h5>ProductsHunter</h5>
                             <div className="proj-imgbx">
                               <Carousel>
                                 <Carousel.Item interval={2500}>
@@ -216,13 +220,15 @@ export const Experience = () => {
                                 </Carousel.Item>
                               </Carousel>
                             </div>
-                            <div className="proj-txdesc">
-                              {isReadMore1
-                                ? projectt1.description.slice(0, 100)
-                                : projectt1.description}
-                              <span onClick={toggleReadMore1}>
-                                {isReadMore1 ? "...read more" : " show less"}
-                              </span>
+                            <div className="proj-txdesc-parent">
+                              <div className="proj-txdesc">
+                                {isReadMore1
+                                  ? projectt1.description.slice(0, 100)
+                                  : projectt1.description}
+                                <span onClick={toggleReadMore1}>
+                                  {isReadMore1 ? "...read more" : " show less"}
+                                </span>
+                              </div>
                             </div>
                             <div className="soc">
                               <div className="socicon">
@@ -258,13 +264,14 @@ export const Experience = () => {
                           </Col>
                         );
                       })}
+                      
                     </div>
-
+                      
                     <div className="item">
                       {project3.map((project, index) => {
                         return (
                           <Col size={12} sm={6} md={12}>
-                            <h5>Cars Treatment</h5>
+                            <h5>Cars treatment Management System</h5>
                             <div className="proj-imgbx">
                               <Carousel>
                                 <Carousel.Item interval={2500}>
@@ -452,6 +459,19 @@ export const Experience = () => {
                                 <div className="hover-text">
                                   <span className="tooltip-text" id="bottom">
                                     {" "}
+                                    Personal Website
+                                  </span>
+                                  <a
+                                    href="https://github.com/akamary/mern-portfolio-heroku"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                  >
+                                    <img src={link} alt="Website" />
+                                  </a>
+                                </div>
+                                <div className="hover-text">
+                                  <span className="tooltip-text" id="bottom">
+                                    {" "}
                                     Personal Portfolio
                                   </span>
                                   <a
@@ -472,7 +492,7 @@ export const Experience = () => {
                       {project4.map((project, index) => {
                         return (
                           <Col size={12} sm={6} md={12}>
-                            <h5>Student System</h5>
+                            <h5>Student Management System</h5>
                             <div className="proj-imgbx">
                               <Carousel>
                                 <Carousel.Item interval={5000}>

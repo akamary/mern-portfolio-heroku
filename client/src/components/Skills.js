@@ -15,12 +15,14 @@ const SkillContainer = styled.div`
   justify-content: center;
   align-items: center;
   grid-template-columns: auto auto auto auto auto auto auto auto;
-  @media (max-width: 480px) {
+  span {
+    color: white;
+  }
+  @media (max-width: 560px) {
     display: grid;
     grid-template-columns: auto auto auto;
     max-height: auto;
     margin: 0 auto;
-
     margin-bottom: 40px;
     justify-content: center;
     align-items: center;
@@ -32,7 +34,7 @@ const SkillItem = styled.div`
   display: flex;
   align-items: center;
   transition: 0s;
-
+  
   margin: ${(props) => (props.theme.isMobile ? "0 auto" : "0")};
   svg,
   div {
@@ -40,7 +42,9 @@ const SkillItem = styled.div`
     font-size: 2rem;
   }
   span {
+    color: "white";
     display: ${(props) => (props.theme.isMobile ? "none" : "inline")};
+    
   }
   &:hover {
     border-radius: 15px;

@@ -1,12 +1,12 @@
 const VisitorData = require("./../models/visitor.js");
 const geoip = require("geoip-lite");
-const requestIp = require("request-ip");
 
 const visitorUser = async (req, res) => {
-  let clientIp = req.headers["x-forwarded-for"];
   let today = new Date();
-  //let clientIp = req.headers["x-real-ip"];
+  let clientIp = req.headers["x-real-ip"] || req.ip;
+  console.log(clientIp + " client");
   let ip = clientIp;
+  console.log(ip + " ipip");
   const geo = geoip.lookup(ip);
   let year = today.getFullYear();
   let month = today.getMonth() + 1;
@@ -30,15 +30,15 @@ const visitorUser = async (req, res) => {
       firstUpdateDate: dateUpdate,
       lastUpdateTime: todayUpdate,
       lastUpdateDate: dateUpdate,
-      // country: geo.country,
-      // region: geo.region,
-      // timezone: geo.timezone,
-      // city: geo.city,
+      country: geo.country,
+      region: geo.region,
+      timezone: geo.timezone,
+      city: geo.city,
     });
     try {
       await beginCount.save();
     } catch (e) {
-      console.log("error");
+      console.log("error??");
     }
   } else {
     visitors.count += 1;
@@ -53,4 +53,4 @@ const visitorUser = async (req, res) => {
   }
 };
 
-module.exports = visitorUser;
+module.exports =visitorUser;

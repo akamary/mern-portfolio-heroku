@@ -4,62 +4,98 @@ import { loadFull } from "tsparticles";
 import { useCallback, useMemo } from "react";
 
 const ParticlesComponent = (props) => {
-  const options = useMemo(() => {
-    return {
-      background: {
-        color: "#000", // this sets a background color for the canvas
-      },
-      fullScreen: {
-        enable: true, // enabling this will make the canvas fill the entire screen, it's enabled by default
-        zIndex: -1, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
-      },
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true, // enables the click event
-            mode: "push", // adds the particles on click
-          },
-          onHover: {
-            enable: true, // enables the hover event
-            mode: "repulse", // make the particles run away from the cursor
-          },
-        },
-        modes: {
-          push: {
-            quantity: 1, // number of particles to add on click
-          },
-          repulse: {
-            distance: 200, // distance of the particles from the cursor
-          },
-        },
-      },
-      particles: {
-        links: {
-          enable: true, // enabling this will make particles linked together
-          distance: 50, // maximum distance for linking the particles
-        },
-        move: {
-          enable: true, // enabling this will make particles move in the canvas
-          speed: { min: 1, max: 1 }, // using a range in speed value will make particles move in a random speed between min/max values, each particles have its own value, it won't change in time by default
-        },
-        opacity: {
-          value: { min: 0.3, max: 0.7 }, // using a different opacity, to have some semitransparent effects
-        },
-        size: {
-          value: { min: 1, max: 1 }, // let's randomize the particles size a bit
-        },
-      },
-    };
-  }, []);
+  const particlesInit = useCallback(async engine => {
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadSlim(engine);
+}, []);
 
-  // useCallback is not mandatory, but it's recommended since this callback can be memoized if static
-  const particlesInit = useCallback((engine) => {
-    loadSlim(engine);
-    // loadFull(engine); // for this sample the slim version is enough, choose whatever you prefer, slim is smaller in size but doesn't have all the plugins and the mouse trail feature
-  }, []);
+const particlesLoaded = useCallback(async container => {
+}, []);
 
-  // setting an id can be useful for identifying the right particles component, this is useful for multiple instances or reusable components
-  return <Particles id={props.id} init={particlesInit} options={options} />;
-};
+return (
+  <Particles
+      id="tsparticles"
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={{
+          background: {
+              color: "#000",
+              
+          },
+          fullScreen: {
+            enable: true, // enabling this will make the canvas fill the entire screen, it's enabled by default
+            zIndex: -1, // this is the z-index value used when the fullScreen is enabled, it's 0 by default
+          },
+          fpsLimit: 120,
+          interactivity: {
+              events: {
+                  onClick: {
+                      enable: true,
+                      mode: "push",
+                  },
+                  onHover: {
+                      enable: true,
+                      mode: "repulse",
+                  },
+                  resize: true,
+              },
+              modes: {
+                  push: {
+                      quantity: 1,
+                  },
+                  repulse: {
+                      distance: 200,
+                      duration: 0.4,
+                  },
+              },
+          },
+          particles: {
+              color: {
+                  value: "#565656",
+              },
+              links: {
+                  color: "#565656",
+                  distance: 150,
+                  enable: true,
+                  opacity: 0.5,
+                  width: 1,
+              },
+              collisions: {
+                  enable: true,
+              },
+              move: {
+                  direction: "none",
+                  enable: true,
+                  outModes: {
+                      default: "bounce",
+                  },
+                  random: false,
+                  speed: 2,
+                  straight: false,
+              },
+              number: {
+                  density: {
+                      enable: true,
+                      area: 500,
+                  },
+                  value: 20,
+              },
+              opacity: {
+                  value: 0.7,
+              },
+              shape: {
+                  type: "circle",
+              },
+              size: {
+                  value: { min: 1, max: 5 },
+              },
+          },
+          detectRetina: true,
+      }}
+  />
+);
+}
 
 export default ParticlesComponent;

@@ -22,17 +22,24 @@ import postmanic from "./assets/images/postman.svg";
 import springboot from "./assets/images/springboot.svg";
 import dockeric from "./assets/images/docker.svg";
 import awsic from "./assets/images/aws.svg";
+import ht5 from "./assets/images/logo-html5-white.svg";
+import css3 from "./assets/images/logo-css3-white.svg";
+import js from "./assets/images/logo-javascript-white.svg";
+import node from "./assets/images/node-js-white.svg";
+import reacts from "./assets/images/react-white.svg";
+import gitc from "./assets/images/git-white.svg";
+import ghub from "./assets/images/github-white.svg";
 
 export const skills = [
-  { id: "html", name: "HTML 5", icon: faHtml5, color: "#e34c26" },
-  { id: "css", name: "CSS 3", icon: faCss3Alt, color: "#264de4" },
-  { id: "js", name: "JavaScript", icon: faJsSquare, color: "#f0db4f" },
-  { id: "nodejs", name: "Node.js", icon: faNodeJs, color: "#3c873a" },
-  { id: "react", name: "React", icon: faReact, color: "#51dbfb" },
+  { id: "html", name: "HTML 5", svg: ht5, color: "#e34c26" },
+  { id: "css", name: "CSS 3", svg: css3, color: "#264de4" },
+  { id: "js", name: "JavaScript", svg: js, color: "#f0db4f" },
+  { id: "nodejs", name: "Node.js", svg: node, color: "#3c873a" },
+  { id: "react", name: "React", svg: reacts, color: "#51dbfb" },
 
   { id: "firebase", name: "Firebase", svg: FirebaseLogo, color: "#ffa611" },
-  { id: "git", name: "Git", icon: faGitAlt, color: "#f1502f" },
-  { id: "github", name: "GitHub", icon: faGithub, color: "#888" },
+  { id: "git", name: "Git", svg: gitc, color: "#f1502f" },
+  { id: "github", name: "GitHub", svg: ghub, color: "#888" },
   { id: "mysql", name: "MySQL", svg: Mysql, color: "#51dbfb" },
   { id: "postgress", name: "PostgreSQL", svg: Postgres, color: "#264de4" },
   { id: "mongodb", name: "MongoDB", svg: Mongodb, color: "#3c873a" },
@@ -48,4 +55,3 @@ export const skills = [
   { id: "docker", name: "Docker", svg: dockeric, color: "#264de4" },
   { id: "aws", name: "AWS", svg: awsic },
 ];
-

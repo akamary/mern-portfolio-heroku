@@ -8,32 +8,37 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  width: 400px;
-  height: 70px;
+  width: 300px;
+  height: auto;
   background: linear-gradient(
     90.21deg,
     rgba(109, 213, 245, 0.5) -5.91%,
     rgba(35, 10, 148, 0.5) 111.58%
   );
   border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 38px;
+  font-size: 30px;
   margin-bottom: 16px;
   display: inline-block;
   align-items: center;
   border-radius: 20px;
 }
+ 
 .banner h1 {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
   display: block;
+  
 }
 .banner p {
   color: #b8b8b8;
@@ -50,7 +55,7 @@
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
+  margin-top: 30px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
@@ -117,7 +122,7 @@
   border-right: 0.08em solid #666;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 560px) {
   .banner {
     margin-top: 0;
     padding: 150px 0 100px 0;
@@ -128,6 +133,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    height: auto;
+    width: 300px;
+  margin-left: auto;
+  margin-right: auto;
   }
   .banner .tagline {
     font-weight: 700;
@@ -141,13 +150,13 @@
     border: 1px solid rgba(255, 255, 255, 0.5);
     font-size: 28px;
     width: 250px;
-    height: 60px;
+    height: auto;
     margin-bottom: 16px;
     display: inline-block;
     align-items: center;
   }
   .banner h1 {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 700;
     letter-spacing: 0.8px;
     line-height: 1;
@@ -155,8 +164,8 @@
     display: block;
   }
   .banner p {
-    color: #b8b8b8;
-    font-size: 16px;
+    color: #d5d5d5;
+    font-size: 14px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
     margin-left: auto;
